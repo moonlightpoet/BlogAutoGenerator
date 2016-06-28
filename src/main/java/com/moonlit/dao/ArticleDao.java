@@ -33,4 +33,7 @@ public class ArticleDao extends JdbcDaoSupport {
 	public void delete(int id) {
 		getJdbcTemplate().update("delete from blog where id=?", new Object[] { id });
 	}
+	public void deleteAll() {
+		getJdbcTemplate().update("delete * from blog");
+	}
 }
