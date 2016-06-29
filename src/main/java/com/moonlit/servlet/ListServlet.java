@@ -15,9 +15,9 @@ import com.moonlit.service.ArticleService;
 
 public class ListServlet extends HttpServlet {
 	@Override
-	@Transient
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Article> articles = ArticleService.queryAll();
+//        List<Article> articles = ArticleService.queryAll();
+		List<Article> articles = ArticleService.queryAll_normal_jdbc();
         req.setAttribute("articles", articles);
         req.getRequestDispatcher("/list.jsp").forward(req, resp);
 	}
