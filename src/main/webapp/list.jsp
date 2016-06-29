@@ -40,5 +40,7 @@
 	}
 %>
 </table>
+<a href="add.jsp">添加新文章</a><br>
+<a href="generate.do">一键生成静态博客</a>
 </body>
 </html>

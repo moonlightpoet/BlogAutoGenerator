@@ -20,4 +20,13 @@
     <url-pattern>/add.do</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>GenerateServlet</servlet-name>
+    <servlet-class>com.moonlit.servlet.GenerateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenerateServlet</servlet-name>
+    <url-pattern>/generate.do</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
