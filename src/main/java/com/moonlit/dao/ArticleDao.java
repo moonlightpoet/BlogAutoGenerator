@@ -1,6 +1,7 @@
 package com.moonlit.dao;
 
 import java.util.List;
+import java.beans.Transient;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -10,7 +11,6 @@ import com.moonlit.model.Article;
 
 public class ArticleDao extends JdbcDaoSupport {
 	class ArticleRowMapper implements RowMapper<Article> {
-		@Override
 		public Article mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Article article = new Article();
 			article.setId(rs.getInt("id"));
@@ -19,11 +19,12 @@ public class ArticleDao extends JdbcDaoSupport {
 			return article;
 		}
 	}
+	@Transient
 	public List<Article> queryAll() {
 		return getJdbcTemplate().query("select * from blog", new ArticleRowMapper());
 	}
 	public void create(Article article) {
-		getJdbcTemplate().update("insert into userinfo (title,content) values (?,?)",
+		getJdbcTemplate().update("insert into blog (title,content) values (?,?)",
 				new Object[] { article.getTitle(), article.getContent() });
 	}
 	public void update(Article article) {
@@ -34,6 +35,6 @@ public class ArticleDao extends JdbcDaoSupport {
 		getJdbcTemplate().update("delete from blog where id=?", new Object[] { id });
 	}
 	public void deleteAll() {
-		getJdbcTemplate().update("delete * from blog");
+		getJdbcTemplate().update("delete from blog");
 	}
 }

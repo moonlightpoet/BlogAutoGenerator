@@ -12,6 +12,7 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-jdbc.xml");
         ArticleDao articleDao = (ArticleDao) context.getBean("jdbcTemplateArticleDao");
+        articleDao.deleteAll();
         Article article = new Article();
         for (int i = 1; i <= 3; i ++) {
         	article.setTitle("title " + i);
