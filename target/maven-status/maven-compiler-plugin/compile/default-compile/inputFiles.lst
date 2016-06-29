@@ -1,2 +1,5 @@
-D:\workspace-java\BlogAutoGenerator\src\main\java\com\moonlit\dao\ArticleDao.java
-D:\workspace-java\BlogAutoGenerator\src\main\java\com\moonlit\model\Article.java
+/home/i/workspace-java/BlogAutoGenerator/src/main/java/com/moonlit/model/Article.java
+/home/i/workspace-java/BlogAutoGenerator/src/main/java/com/moonlit/test/Test.java
+/home/i/workspace-java/BlogAutoGenerator/src/main/java/com/moonlit/servlet/ListServlet.java
+/home/i/workspace-java/BlogAutoGenerator/src/main/java/com/moonlit/dao/ArticleDao.java
+/home/i/workspace-java/BlogAutoGenerator/src/main/java/com/moonlit/service/ArticleService.java

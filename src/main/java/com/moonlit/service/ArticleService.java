@@ -20,6 +20,11 @@ public class ArticleService {
 	    List<Article> articles = articleDao.queryAll_normal_jdbc();
 		return articles;
 	}
+	public static void create(Article article) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring-jdbc.xml");
+	    ArticleDao articleDao = (ArticleDao) context.getBean("jdbcTemplateArticleDao");
+	    articleDao.create(article);
+	}
 	public static void main(String[] args) {
 //		List<Article> list = queryAll();
 		List<Article> list = queryAll_normal_jdbc();

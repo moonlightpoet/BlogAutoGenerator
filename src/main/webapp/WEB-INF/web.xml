@@ -11,8 +11,13 @@
     <url-pattern>/list.do</url-pattern>
   </servlet-mapping>
   
-  <!--listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener--> 
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>com.moonlit.servlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/add.do</url-pattern>
+  </servlet-mapping>
   
 </web-app>
